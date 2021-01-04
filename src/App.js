@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import ReactTable from 'react-table-v6'
 import './App.css';
+import 'react-table-v6/react-table.css'
+import people from './people.js'
 
-function App() {
+const App = () => {
+  
+  const columns = [
+    {
+      Header: 'First Name',
+      accessor: 'first_name'
+    },
+    {
+      Header: 'Last Name',
+      accessor: 'last_name'
+    },
+    {
+      Header: 'Email',
+      accessor: 'email'
+    },
+    {
+      Header: 'Title',
+      accessor: 'title'
+    },
+  ]
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ReactTable
+    data = {people}
+    columns= {columns} />
   );
 }
 

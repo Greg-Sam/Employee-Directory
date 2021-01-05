@@ -1,11 +1,10 @@
 import ReactTable from 'react-table-v6'
-import './App.css';
 import 'react-table-v6/react-table.css'
 import people from './people.js'
-import { render } from '@testing-library/react';
+import { Container, Row } from 'reactstrap';
 
 const App = () => {
-  
+
   const columns = [
     {
       Header: 'First Name',
@@ -15,21 +14,29 @@ const App = () => {
     {
       Header: 'Last Name',
       accessor: 'last_name',
-      filterable: true,
+      filterable: true
     },
     {
       Header: 'Email',
-      accessor: 'email'
+      accessor: 'email',
+      sortable: false
     },
     {
       Header: 'Title',
-      accessor: 'title'
+      accessor: 'title',
+      filterable: true
     },
   ]
   return (
-    <ReactTable
-    data = {people}
-    columns= {columns} />
+    <Container >
+      <Row>
+        <h1 style={{ marginLeft: "auto", marginRight: "auto"}}>Employee Directory</h1>
+      </Row>
+      <ReactTable
+        data={people}
+        columns={columns}
+        defaultPageSize = {15} />
+    </Container>
   );
 }
 

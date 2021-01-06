@@ -9,7 +9,7 @@ const App = () => {
     {
       Header: 'First Name',
       accessor: 'first_name',
-      filterable: true,
+      filterable: true
     },
     {
       Header: 'Last Name',
@@ -28,14 +28,20 @@ const App = () => {
     },
   ]
   return (
-    <Container >
+    <Container 
+    >
       <Row>
-        <h1 style={{ marginLeft: "auto", marginRight: "auto"}}>Employee Directory</h1>
+        <h1 style={{ marginLeft: "auto", marginRight: "auto", marginTop: "2em", marginBottom: "1em"}}>Employee Directory</h1>
       </Row>
       <ReactTable
         data={people}
         columns={columns}
-        defaultPageSize = {15} />
+        defaultPageSize = {10} 
+        className={'-striped'}
+        style={{
+          backgroundColor: 'white'
+        }}
+        />
     </Container>
   );
 }

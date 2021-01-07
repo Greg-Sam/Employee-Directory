@@ -13,7 +13,10 @@
   ## Instalation instructions
   This is a web based app.  Simply go to https://greg-sam.github.io/Employee-Directory/ and get started.  
   ## Usage description
-  100 employees have been preloaded into the table.  Click on the column headers to sort by name or enter the first letters into the filter to quickly find the employee you are searching for.  
+  100 employees have been preloaded into the table.  ![empDir1](https://user-images.githubusercontent.com/71279945/103839988-77ee3f00-5045-11eb-8909-1165898ba954.PNG)  
+Click on the column headers to sort by name   
+![empDir2](https://user-images.githubusercontent.com/71279945/103839989-7886d580-5045-11eb-8172-446bf66ef878.PNG)
+  or enter the first letters into the filter to quickly find the employee you are searching for.  ![empDir3](https://user-images.githubusercontent.com/71279945/103839990-7886d580-5045-11eb-87cc-7bb1bce83549.PNG)    
   ## License information
   MIT   
   ## Contributors
